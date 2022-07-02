@@ -17,7 +17,7 @@ public class SimpleApp {
 
 //region Variables
 
-
+        int wartoscBoolean = 1; //Ta zmienna może przyjmować wartości 0 lub 1
 
 
 
@@ -73,6 +73,37 @@ tekst
 
 //        "C:\\Users\\java\\Pulpit\\dockument.txt"
 
+
+        int intValue5 = 4000000;
+        Integer integerValue3 = Integer.valueOf(4000000);
+        Integer integerValue2 = Integer.valueOf("4000000");
+        Integer integerValue4 = Integer.parseInt("4000000");
+
+        System.out.println("Integer value: " + integerValue3);
+        System.out.println("Integer value: " + integerValue2);
+        System.out.println("Integer value: " + integerValue4);
+
+        boolean boolValue = false;
+        Boolean boolVal = Boolean.FALSE; // Boolean.TRUE
+        Boolean boolVal2 = Boolean.valueOf("true");
+
+        System.out.println("Boolean value: " + boolVal);
+        System.out.println("Boolean value: " + boolVal2);
+
+        boolean boolValue4;
+        if (wartoscBoolean == 1) {
+            boolValue4 = true;
+        } else {
+            boolValue4 = false;
+        }
+        System.out.println(boolValue4);
+
+
+        Double cenaDouble = 12.5;
+        Long cenaInt = Math.round(cenaDouble);
+
+        System.out.println(cenaInt);
+ //zaokrąglanie inny sposób
     }
 
     public static int add(int l1, int l2) {
