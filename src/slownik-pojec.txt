@@ -1,1 +1,74 @@
 Słownik pojęć:
+
+Konsola/terminal - Okno konsoli pozwalające na wpisywanie poleceń z klawiatury, ewentualnie pozwala na wyświetlanie komunikatów podczas działąnia aplikacji
+
+DevOps - Skrót od Development Operations. Jest to metoda tworzenia oprogramowania, która skupia się na komunikacji, współpracy i integracji działań pomiędzy deweloperami i specjalistami od eksploatacji. 
+
+Code review – weryfikacja pod kątem poprawności kodu napisanego przez programistę – przez inną osobę, przed włączeniem kodu do projektu
+
+GIT – repozytorium służące do wersjonowania kodu, porównywania wersji kodu.
+
+Frontend - jest nazwa dla aplikacji webowej, którą widzi użytkownik w przeglądarce.
+Backend - inaczej nazwa dla aplikacji z którą komunikują się aplikacje fronendowe. Aplikacje backendowe wykonują niezbędne procesy np takie jak: operacje matematyczne, odczyty i zapisy do bazy danych itp.
+
+JVM (od ang. Java Virtual Machine) - maszyna wirtualna, która pozwala na wykonanie kodu bajtowego. Warto zaznaczyć, że JVM wykona także kod bajtowy, który został stworzony z wykorzystaniem innego języka programowania kompilowanego do kodu bajtowego Javy np. Clojure lub Kotlin,
+JDK (od ang. Java Development Kit) - to wieloplatformowe środowisko programistyczne, które oferuje zbiór narzędzi i bibliotek niezbędnych do tworzenia aplikacji i apletów. W skład JDK wchodzą narzędzia takie jak javac (kompilator), jar (archiwizator), javadoc (generator dokumentacji), czy jdb (debugger),
+JRE (od ang. Java Runtime Environment) - to zestaw komponentów do tworzenia i uruchamiania aplikacji napisanych w języku Java.
+
+biblioteka (zależność, dependency) — jest to jakiś moduł dostarczany przez kogoś innego (lub np. będący inną częścią tego samego projektu) z którego korzystamy.
+
+maven — to narzędzie do zarządzania zależnościami w projekcie. Znacząco upraszcza konfiguracje projektu (np. samodzielnie pobiera potrzebne zależności z internetu, zarządza tym, jak projekt jest budowany itp), centralna konfiguracja projektu znajduje się w pliku pom.xml
+
+repozytorium (scm, svn, git) — (ang. source code management) jest to centralne miejsce, w którym przechowywany jest kod projektu. Repozytorium przechowuje też wszystkie zmiany, dzięki czemu można podejrzeć kto zmienił co i kiedy (przechowuje więc historię). Dodatkowo przechowuje także tzw. rewizje — czyli w pewnym sensie ‘wersję’ kodu — dzięki czemu nie nadpiszemy (przypadkowo) czyichś zmian w kodzie
+
+ticket (issue) — zgłoszenie zarejestrowane w systemie (issue tracker), najczęściej jest to problem do rozwiązania (bug) lub zadanie do wykonania. Ticket powinien zawierać opis tego, co powinniśmy zrobić, osobę odpowiedzialną oraz inne informacje użyteczne przy pracy
+
+Klasa (ENG. Class) - to fundament Javy. Najprościej mówiąc klasa to taka przestrzeń, w której umieszczamy inne elementy, przechowujemy informacje i je przetwarzamy.
+
+Obiekt (ENG. Object) - jest natomiast reprezentacją klasy i jej nośnikiem. Jeżeli mówimy o czymś, że jest obiektem w Javie, to tak naprawdę wyobrażamy sobie całą klasę i wszystko to co się w niej znajduje. Poprzez obiekt możemy odwoływać się do zmiennych, metod i innych elementów w niej zawartych.
+
+Metoda (ENG. Method) - W niej dokonywane są na przykład obliczenia, lub inne operacje. Metody mogą posiadać parametry wejściowe, które są wykorzystywane podczas ich działania.
+
+Parametr (ENG. parameter) - W programowaniu, wartość przekazywana do danej funkcji / metody. Funkcja ta używa parametru w swoim zadaniu albo wykonuje operacje w oparciu o parametr.
+
+Zmienna (ENG. Variable) - inaczej mówiąc element języka, który pozwala przechowywać wartości, a następnie odwoływać się do nich po nazwach. Proces tworzenia zmiennej możemy podzielić na dwa etapy:
+
+          deklaracja - tutaj określamy typ i nazwę zmiennej,
+          inicjalizacja (nazywana też często inicjacją) - nadanie wartości zmiennej.
+
+Słowa kluczowe - Java zawiera zestaw słów kluczowych, które są zarezerwowane tylko do konkretnych zastosowań. W związku z tym należy pamiętać, aby nie nazywać nimi zmiennych lub klas. Np takie jak:
+
+null – wartość nieokreślona np. brak referencji. W matematyce przypomina wartość zbioru pustego.
+true – wartość logiczna oznaczająca prawdę.
+false – wartość logiczna oznaczająca fałsz.
+const – w niektórych językach programowania tym słowem deklaruje się stałe. W Javie używamy słowa final.
+goto – instrukcja służąca do przeskakiwania w kodzie do określonego miejsca np. przy pomocy etykiety. W Javie ta instrukcja nie ma zastosowania.
+abstract – służy do implementowania metod lub klas abstrakcyjnych. Klasy abstrakcyjne nie mogą posiadać swojej instancji w postaci obiektu, natomiast metody abstrakcyjne nie posiadają swojej definicji. Metody abstrakcyjne można implementować w zwykłej klasie.
+boolean – logiczny typ zmiennych. Przyjmuje wartość true albo false.
+break – użycie tego słowa kluczowego umożliwi wcześniejsze wyjście z pętli (for, while lub do while)
+byte – słowo kluczowe, które deklaruje zmienną typu byte. Jej rozmiar to 1 B czyli 8 bitów.
+char – deklaruje zmienne znakowe. Znaki w Javie przechowywane są w pamięci w standardzie Unicode na 2 Bajtach.
+class – słowo kluczowe służące do deklaracji klas.
+double – słowo deklaruje zmienne zmiennoprzecinkowe podwójnej precyzji. Typ prosty double potrzebuje 8 B pamięci.
+enum – słowo deklaruje zmienne wyliczeniowe.
+final – w Javie słowo kluczowe, którym definiuje się stałe.
+float – słowo deklaruje zmienne zmiennoprzecinkowe pojedynczej precyzji. Typ prosty float potrzebuje 4 B pamięci
+int – deklarowanie zmiennej typu całkowitego. Potrzebuje 4 B pamięci.
+long – deklaruje zmienne całkowitoliczbowe. Wymaga 8 B pamięci.
+new – słowo kluczowe, które tworzy instancje klas w postaci obiektu.
+package – dodaje klasy lub interfejsy do pakietów.
+private – modyfikator dostępu do klas, metod lub pól. Najbardziej restrykcyjny wśród modyfikatorów, przez co widoczność jest ograniczona do danej klasy.
+protected – modyfikator dostępu do klas, metod lub pól. Widoczność ograniczona do pakietu lub klas dziedziczonych.
+public – modyfikator dostępu do klas, metod lub pól. Klasy publiczne widoczne są wszędzie, tak samo metody oraz dostęp do pól nie wymaga metod.
+short – deklaruje zmienne całkowitoliczbowe. Wymaga 2 B pamięci.
+static – służy deklaracji zmiennych, metod lub klas wewnętrznych jako statyczne. Każdy element statyczny należy do klasy, a nie do obiektu.
+this – wskazuje dany obiekt np. w metodach i konstruktorach.
+void – metoda, która nie zwraca żadnej wartości.
+
+Dodatkowe informacje:
+Hibernate - framework mapowania obiektowo-relacyjnego do komunikacji z bazą danych,
+Spring - najpopularniejszy Javowy framework do tworzenia aplikacji internetowych,
+Spring Boot - ułatwia tworzenie samodzielnych, produkcyjnych aplikacji opartych na Spring, które można „po prostu uruchomić”,
+Mockito - służy do pisania testów jednostkowych i integracyjnych,
+Log4j 2 - biblioteka służąca do tworzenia logów w trakcie działania aplikacji.
+Slf4j - druga biblioteka służąca do tworzenia logów w trakcie działania aplikacji.
