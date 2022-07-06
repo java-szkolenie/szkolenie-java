@@ -9,9 +9,21 @@ public class SimpleApp {
 
     enum Stan {on, off}
     enum Plec {kobieta, mezczyzna}
+
+    public static String SEPARATOR_SPACJA = " ";
+
     public static void main(String[] args) {
 
         int scale = 0;
+
+        String space = " ";
+        String a = "Ala";
+        String b = "ma kota";
+
+
+        System.out.println(a + space + b);
+        System.out.println(a + SEPARATOR_SPACJA + b);
+
 
 //praca domowa
         //Utworzenie 2 zmiennych typu String i ich inicjalizacja
@@ -21,6 +33,8 @@ public class SimpleApp {
         //dodawanie , odejmowanie, monożenie i dzielenie.
         //proszę o wykonanie działania dzielenie przez 0
 
+
+        /*
         //region Zaokrąglanie liczb
         roundNumber("2.34", scale);
         System.out.println("NEXT");
@@ -64,6 +78,8 @@ public class SimpleApp {
         System.out.println("Dzielenie przez 0: " +  divisionByZero(valDouble1, 0.0));
         System.out.println("Dzielenie przez 0: " +  divisionByZero(valBigDec1, BigDecimal.ZERO));
         //endregion
+
+        */
     }
 
     public static int add(int l1, int l2) {
