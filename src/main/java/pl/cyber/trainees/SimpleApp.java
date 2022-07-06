@@ -16,13 +16,13 @@ public class SimpleApp {
 
         int scale = 0;
 
-        String space = " ";
-        String a = "Ala";
-        String b = "ma kota";
-
-
-        System.out.println(a + space + b);
-        System.out.println(a + SEPARATOR_SPACJA + b);
+//        String space = " ";
+//        String a = "Ala";
+//        String b = "ma kota";
+//
+//
+//        System.out.println(a + space + b);
+//        System.out.println(a + SEPARATOR_SPACJA + b);
 
 
 //praca domowa
@@ -34,7 +34,7 @@ public class SimpleApp {
         //proszę o wykonanie działania dzielenie przez 0
 
 
-        /*
+
         //region Zaokrąglanie liczb
         roundNumber("2.34", scale);
         System.out.println("NEXT");
@@ -79,7 +79,6 @@ public class SimpleApp {
         System.out.println("Dzielenie przez 0: " +  divisionByZero(valBigDec1, BigDecimal.ZERO));
         //endregion
 
-        */
     }
 
     public static int add(int l1, int l2) {
