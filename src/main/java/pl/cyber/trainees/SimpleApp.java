@@ -1,12 +1,14 @@
 package pl.cyber.trainees;
 
+import org.codehaus.groovy.transform.SourceURIASTTransformation;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class SimpleApp {
 
-    enum Stan {on, off};
-    enum Plec {kobieta, mezczyzna};
+    enum Stan {on, off}
+    enum Plec {kobieta, mezczyzna}
     public static void main(String[] args) {
 
         int scale = 0;
@@ -19,6 +21,7 @@ public class SimpleApp {
         //dodawanie , odejmowanie, monożenie i dzielenie.
         //proszę o wykonanie działania dzielenie przez 0
 
+        //region Zaokrąglanie liczb
         roundNumber("2.34", scale);
         System.out.println("NEXT");
         roundNumber("2.44", scale);
@@ -31,6 +34,36 @@ public class SimpleApp {
         System.out.println("NEXT");
         roundNumber("2.6", scale);
         System.out.println("NEXT");
+        //endregion
+
+        //region praca domowa
+        String valString1 = "pierwszy string";
+        String valString2 = new String("drugi string"); // konstrukcja stowosana np czy odczycie informacji z pliku tekstowego zamiast napisu wtedy podaje się jakąś wartośc ze zmiennej
+
+        Integer valInt1 = 2;
+        Integer valInt2 = Integer.valueOf("3"); // konstrukcja stosowana przy inicjalizacji poprzez wartości napisowe (inaczej Stringi)
+
+        System.out.println("dodawanie: " + add(valInt1, valInt2) + ", odejmowanie: " + subtract(valInt1, valInt2) + ", mnożenie: " + multiplication(valInt1, valInt2) + ", dzielenie: " + division(valInt1, valInt2));
+
+        Double valDouble1 = 10.5;
+        Double valDouble2 = Double.valueOf("4.5");
+
+        System.out.println("dodawanie: " + add(valDouble1, valDouble2) + ", odejmowanie: " + subtract(valDouble1, valDouble2) + ", mnożenie: " + multiplication(valDouble1, valDouble2) + ", dzielenie: " + division(valDouble1, valDouble2));
+
+        BigDecimal valBigDec1 = BigDecimal.valueOf(10.5);
+        BigDecimal valBigDec2 = new BigDecimal("4.5");
+
+        System.out.println("dodawanie: " + add(valBigDec1, valBigDec2) + ", odejmowanie: " + subtract(valBigDec1, valBigDec2) + ", mnożenie: " + multiplication(valBigDec1, valBigDec2) + ", dzielenie: " + division(valBigDec1, valBigDec2));
+
+//        Problem dzielenia przez 0
+
+//        System.out.println("Dzielenie przez 0" +  division(valDouble1, 0.0));
+//        System.out.println("Dzielenie przez 0" +  division(valBigDec1, BigDecimal.ZERO));
+
+//Rozwiązanie:
+        System.out.println("Dzielenie przez 0: " +  divisionByZero(valDouble1, 0.0));
+        System.out.println("Dzielenie przez 0: " +  divisionByZero(valBigDec1, BigDecimal.ZERO));
+        //endregion
     }
 
     public static int add(int l1, int l2) {
@@ -59,6 +92,43 @@ public class SimpleApp {
         System.out.println("Round Half up: " + roundHalfUp);
         System.out.println("Round Half down: " + roundHalfDown);
         System.out.println("Round Half floor: " + roundHalfFloor);
+    }
+
+    public static Integer add(final Integer val, final Integer val2) { return val + val2; }
+    public static Integer subtract(final Integer val, final Integer val2) { return val - val2; }
+    public static Integer multiplication(final Integer val, final Integer val2) { return val * val2; }
+    public static Integer division(final Integer val, final Integer val2) { return val / val2; }
+
+    public static Double add(final Double val, final Double val2) { return val + val2; }
+    public static Double subtract(final Double val, final Double val2) { return val - val2; }
+    public static Double multiplication(final Double val, final Double val2) { return val * val2; }
+    public static Double division(final Double val, final Double val2) { return val / val2; }
+
+    public static BigDecimal add(final BigDecimal val, final BigDecimal val2) { return val.add(val2); }
+    public static BigDecimal subtract(final BigDecimal val, final BigDecimal val2) { return val.subtract(val2); }
+    public static BigDecimal multiplication(final BigDecimal val, final BigDecimal val2) { return val.multiply(val2); }
+    public static BigDecimal division(final BigDecimal val, final BigDecimal val2) {
+        return val.divide(val2, 2, RoundingMode.HALF_DOWN);
+    }
+
+    public static Double divisionByZero(final Double val, final Double val2) {
+        var zero = Double.valueOf(0);
+        if(zero.equals(val2)) {
+            System.out.println("Dzialanie przed zero!!!!!");
+            return 0.0;
+        }
+        return val / val2;
+    }
+
+    public static BigDecimal divisionByZero(final BigDecimal val, final BigDecimal val2) {
+        BigDecimal divide = BigDecimal.ZERO;
+
+        try {
+            divide = val.divide(val2, 2, RoundingMode.HALF_DOWN);
+        } catch (final ArithmeticException ex) {
+            System.out.println("Działanie dzielenia przez zero!!!!!!");
+        }
+        return divide;
     }
 }
 
