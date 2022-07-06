@@ -35,6 +35,25 @@ Zmienna (ENG. Variable) - inaczej mówiąc element języka, który pozwala przec
 
           deklaracja - tutaj określamy typ i nazwę zmiennej,
           inicjalizacja (nazywana też często inicjacją) - nadanie wartości zmiennej.
+          
+Konstruktor - Specjalna metoda w klasie, która ma za zadanie tworzenia obiektu klasy w której się znajduje. Jeśli nie napiszemy swojego konstruktora, kompilator wykonuje tzw konstruktor domyślny.
+
+Konstruktor domyślny - to inaczej mówiąc konstruktor bez parametrów np.
+public class Person {
+
+    public String forename;
+    public String surname;
+    public int age;
+         
+         /**
+     * Konstruktor domyślny
+     */
+    public Person() {
+
+    }
+   }
+          
+          
 
 Słowa kluczowe - Java zawiera zestaw słów kluczowych, które są zarezerwowane tylko do konkretnych zastosowań. W związku z tym należy pamiętać, aby nie nazywać nimi zmiennych lub klas. Np takie jak:
 
