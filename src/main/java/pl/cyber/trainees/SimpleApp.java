@@ -48,6 +48,8 @@ public class SimpleApp {
         System.out.println("NEXT");
         //endregion
 
+        System.out.println("testowa zmiana w kodzie");
+
         //region praca domowa
         String valString1 = "pierwszy string";
         String valString2 = new String("drugi string"); // konstrukcja stowosana np czy odczycie informacji z pliku tekstowego zamiast napisu wtedy podaje się jakąś wartośc ze zmiennej
