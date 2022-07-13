@@ -35,6 +35,41 @@ Zmienna (ENG. Variable) - inaczej mówiąc element języka, który pozwala przec
 
           deklaracja - tutaj określamy typ i nazwę zmiennej,
           inicjalizacja (nazywana też często inicjacją) - nadanie wartości zmiennej.
+
+przeciążenie metod (eng. Overloading) - Pozwala to najprościej mówiąc na tworzenie metod o takich samych nazwach, ale różnych parametrach. Analogicznie nieprawidłowe jest utworzenie w jednej klasie dwóch metod o identycznej nazwie i przyjmującej takie same parametry, a także metody o takiej samej nazwie i parametrach, ale różniące się tylko zwracanym typem. Poprawna jest więc poniższa klasa:
+
+class Test{
+  int dodaj(int a, int b){
+    return a+b;
+  }
+
+  double dodaj(double a, double b){
+    return a+b;
+  }
+}
+
+Natomiast niepoprawne są na przykład:
+
+class Test2{
+  int dodaj(int a, int b){
+    return a+b;
+  }
+
+  double dodaj(int a, int b){
+    return a+b;
+  }
+}
+
+
+Podklasa - termin określający klasę, która dziedziczy pola i metody z innej klasy
+
+Dziedziczenie - Dziedziczenie jak sama nazwa wskazuje powoduje przekazanie pewnych cech innym klasom. Najprościej wyobrazić to sobie jako model rodziny. Dziadkowie to klasa bazowa, rodzice dziedziczą pewne cechy po dziadkach takie jak kolor oczu, wygląd - u nas byłyby to pola i metody. Dzieci z kolei mogą dziedziczyć od rodziców podobne cechy. Klasy potomne w Javie oprócz przejmowania pewnych cech mogą je także rozszerzyć i dlatego warto ich używać. Zaoszczędzi to nam pisania wielu identycznych linii kodu.
+              Aby rozszerzyć jakąś klasę należy użyć słowa kluczowego extends w nagłówku klasy:
+
+              public class Szef extends Pracownik{
+              ...
+              }
+
           
 Konstruktor - Specjalna metoda w klasie, która ma za zadanie tworzenia obiektu klasy w której się znajduje. Jeśli nie napiszemy swojego konstruktora, kompilator wykonuje tzw konstruktor domyślny.
 
@@ -91,3 +126,25 @@ Spring Boot - ułatwia tworzenie samodzielnych, produkcyjnych aplikacji opartych
 Mockito - służy do pisania testów jednostkowych i integracyjnych,
 Log4j 2 - biblioteka służąca do tworzenia logów w trakcie działania aplikacji.
 Slf4j - druga biblioteka służąca do tworzenia logów w trakcie działania aplikacji.
+
+
+Modyfikatory dostępu metod/klas/parametrów:
+
+            Klasa  Pakiet   Podklasa Wszyscy
+public       +      +         +       +
+protected    +      +         +
+default      +     +
+private      +
+
+
+public - wszyscy mają dostęp
+protected - widzą wszyscy w tym pakiecie i Ci co rozszerzają tą klasę
+default - widać tylko w tym pakiecie
+private - tylko ta klasa widzi swoje pola
+
+
+
+
+Przydatne skróty klawiszowe:
+Alt + Enter -> okno dialogowe dodatkowych funkcji np. importowania klas które są na czerwono, tworzenia nowych metod
+Ctrl + Alt + L  -> formatowanie napisanego kodu
