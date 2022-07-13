@@ -1,7 +1,5 @@
 package pl.cyber.trainees;
 
-import org.codehaus.groovy.transform.SourceURIASTTransformation;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -74,7 +72,7 @@ public class SimpleApp {
 //        System.out.println("Dzielenie przez 0" +  division(valDouble1, 0.0));
 //        System.out.println("Dzielenie przez 0" +  division(valBigDec1, BigDecimal.ZERO));
 
-//Rozwiązanie:
+        //Rozwiązanie:
         System.out.println("Dzielenie przez 0: " +  divisionByZero(valDouble1, 0.0));
         System.out.println("Dzielenie przez 0: " +  divisionByZero(valBigDec1, BigDecimal.ZERO));
         //endregion
@@ -94,22 +92,34 @@ public class SimpleApp {
     }
 
     public static void roundNumber(final String number, int scale) {  //To najczęstszy sposób gdzie ja stosuję zaokrąglanie liczb
+
+//        double -> Double -> 2.55500000000000000  //<- taka jest reprezentacja liczby w systemie
+
+//        BigDecimal warotsc = new BigDecimal(BigInteger.ONE, 2); //Ctrl + P  // deklaracja zmiennej zalecana przy systemach księgowych
+
+
         BigDecimal value = BigDecimal.valueOf(Double.parseDouble(number));
         var roundHalfUp = value;
-        roundHalfUp = roundHalfUp.setScale(scale, RoundingMode.UP);
+        roundHalfUp = roundHalfUp.setScale(scale, RoundingMode.UP); // 0.5 1.5 -> 1, 2
 
         var roundHalfDown = value;
-        roundHalfDown = roundHalfDown.setScale(scale, RoundingMode.DOWN);
+        roundHalfDown = roundHalfDown.setScale(scale, RoundingMode.DOWN); // 0.5, 1.5 -> 0 ,1
 
         var roundHalfFloor = value;
-        roundHalfUp = roundHalfUp.setScale(scale, RoundingMode.FLOOR);
+        roundHalfUp = roundHalfUp.setScale(scale, RoundingMode.FLOOR); // 2.5 -> 2;     2.9 -> 2
 
         System.out.println("Round Half up: " + roundHalfUp);
         System.out.println("Round Half down: " + roundHalfDown);
         System.out.println("Round Half floor: " + roundHalfFloor);
     }
 
-    public static Integer add(final Integer val, final Integer val2) { return val + val2; }
+    public static String add(final String val, final String val2) {
+        var result = val + val2 + "\n";
+        return result;
+    }
+    public static Integer add(final Integer val, final Integer val2) {
+        return val + val2;
+    }
     public static Integer subtract(final Integer val, final Integer val2) { return val - val2; }
     public static Integer multiplication(final Integer val, final Integer val2) { return val * val2; }
     public static Integer division(final Integer val, final Integer val2) { return val / val2; }
