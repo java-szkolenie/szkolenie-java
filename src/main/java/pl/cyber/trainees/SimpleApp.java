@@ -1,5 +1,6 @@
 package pl.cyber.trainees;
 
+import pl.cyber.trainees.klkulator.Calculator;
 import pl.cyber.trainees.klkulator.Dodawanie;
 import pl.cyber.trainees.klkulator.Dzielenie;
 import pl.cyber.trainees.klkulator.Mnozenie;
@@ -7,8 +8,6 @@ import pl.cyber.trainees.klkulator.Odejmowanie;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-
-import static pl.cyber.trainees.klkulator.Mnozenie.multiplication;
 
 public class SimpleApp {
 
@@ -27,6 +26,9 @@ public class SimpleApp {
 
     int scale = 0;
 
+    Calculator calculator = new Calculator(dodawanie, mnozenie, odejmowanie, dzielenie);
+    calculator.printData();
+
 //        String space = " ";
 //        String a = "Ala";
 //        String b = "ma kota";
@@ -44,53 +46,18 @@ public class SimpleApp {
     //proszę o wykonanie działania dzielenie przez 0
 
     //region Zaokrąglanie liczb
-    roundNumber("2.34", scale);
-    System.out.println("NEXT");
-    roundNumber("2.44", scale);
-    System.out.println("NEXT");
-    roundNumber("2.46", scale);
-    System.out.println("NEXT");
-    roundNumber("2.5", scale);
-    System.out.println("NEXT");
-    roundNumber("2.55", scale);
-    System.out.println("NEXT");
-    roundNumber("2.6", scale);
-    System.out.println("NEXT");
-    //endregion
-
-    //region praca domowa
-    String valString1 = "pierwszy string";
-    String valString2 = new String(
-        "drugi string"); // konstrukcja stowosana np czy odczycie informacji z pliku tekstowego zamiast napisu wtedy podaje się jakąś wartośc ze zmiennej
-
-    Integer valInt1 = 2;
-    Integer valInt2 = Integer.valueOf("3"); // konstrukcja stosowana przy inicjalizacji poprzez wartości napisowe (inaczej Stringi)
-
-    System.out.println(
-        "dodawanie: " + dodawanie.add(valInt1, valInt2) + ", odejmowanie: " + odejmowanie.subtract(valInt1, valInt2) + ", mnożenie: " + multiplication(valInt1,
-            valInt2) + ", dzielenie: " + dzielenie.division(valInt1, valInt2));
-
-    Double valDouble1 = 10.5;
-    Double valDouble2 = Double.valueOf("4.5");
-
-    //UWAGA! W tym przypadku bardziej preferowane rozwiącanie.
-    System.out.println("dodawanie: " + Dodawanie.add(valDouble1, valDouble2) + ", odejmowanie: " + Odejmowanie.subtract(valDouble1, valDouble2) + ", mnożenie: "
-        + Mnozenie.multiplication(valDouble1, valDouble2) + ", dzielenie: " + Dzielenie.division(valDouble1, valDouble2));
-
-    BigDecimal valBigDec1 = BigDecimal.valueOf(10.5);
-    BigDecimal valBigDec2 = new BigDecimal("4.5");
-
-    System.out.println("dodawanie: " + Dodawanie.add(valBigDec1, valBigDec2) + ", odejmowanie: " + Odejmowanie.subtract(valBigDec1, valBigDec2) + ", mnożenie: "
-        + Mnozenie.multiplication(valBigDec1, valBigDec2) + ", dzielenie: " + Dzielenie.division(valBigDec1, valBigDec2));
-
-//        Problem dzielenia przez 0
-
-//        System.out.println("Dzielenie przez 0" +  division(valDouble1, 0.0));
-//        System.out.println("Dzielenie przez 0" +  division(valBigDec1, BigDecimal.ZERO));
-
-    //Rozwiązanie:
-    System.out.println("Dzielenie przez 0: " + Dzielenie.divisionByZero(valDouble1, 0.0));
-    System.out.println("Dzielenie przez 0: " + Dzielenie.divisionByZero(valBigDec1, BigDecimal.ZERO));
+//    roundNumber("2.34", scale);
+//    System.out.println("NEXT");
+//    roundNumber("2.44", scale);
+//    System.out.println("NEXT");
+//    roundNumber("2.46", scale);
+//    System.out.println("NEXT");
+//    roundNumber("2.5", scale);
+//    System.out.println("NEXT");
+//    roundNumber("2.55", scale);
+//    System.out.println("NEXT");
+//    roundNumber("2.6", scale);
+//    System.out.println("NEXT");
     //endregion
 
   }
