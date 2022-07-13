@@ -148,3 +148,4 @@ private - tylko ta klasa widzi swoje pola
 Przydatne skróty klawiszowe:
 Alt + Enter -> okno dialogowe dodatkowych funkcji np. importowania klas które są na czerwono, tworzenia nowych metod
 Ctrl + Alt + L  -> formatowanie napisanego kodu
+Alt + Insert - menu kontekstowe do generowania kodu, wybieramy opcję Constructor
