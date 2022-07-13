@@ -48,7 +48,7 @@ public class SimpleApp {
         System.out.println("NEXT");
         //endregion
 
-        System.out.println("testowa zmiana w kodzie");
+        System.out.println("testowa zmiana w kodzie!");
 
         //region praca domowa
         String valString1 = "pierwszy string";
