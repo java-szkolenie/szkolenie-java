@@ -6,7 +6,6 @@ package pl.cyber.trainees.dziedziczenie;
 
 //Nowa klasa określająca markę pojazdu
 public class Pojazd {
-
   private String marka;
   private String rocznik;
   private String naped;
