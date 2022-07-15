@@ -7,9 +7,9 @@ package pl.cyber.trainees.dziedziczenie;
 //Nowa klasa określająca markę pojazdu
 public class Pojazd {
 
-  private final String marka;
-  private final String rocznik;
-  private final String naped;
+  private String marka;
+  private String rocznik;
+  private String naped;
 
   public Pojazd() {
     marka = "";
@@ -44,5 +44,17 @@ public class Pojazd {
 
   public String getNaped() {
     return naped;
+  }
+
+  public void setMarka(final String marka) {
+    this.marka = marka;
+  }
+
+  public void setRocznik(final String rocznik) {
+    this.rocznik = rocznik;
+  }
+
+  public void setNaped(final String naped) {
+    this.naped = naped;
   }
 }
