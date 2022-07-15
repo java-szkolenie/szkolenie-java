@@ -18,12 +18,21 @@ public class SimpleApp {
             "przód", "Passat", 300000,
             2.0,  Kolor.valueOf("NIEBIESKI"));
 
-//        System.out.println(modelPojazdu1.toString());
-        System.out.println(modelPojazdu2);
+        modelPojazdu1.setKolor(Kolor.CZERWONY);
+        modelPojazdu1.setPojemnoscSilnika(1.4);
+        modelPojazdu1.setMarka("Skoda");
+        modelPojazdu1.setNazwa("Fabia");
+        modelPojazdu1.setPrzebieg(12000);
+        modelPojazdu1.setNaped("przód");
+        modelPojazdu1.setRocznik("1990");
 
-        System.out.println("marka pojazdu: " + modelPojazdu2.getMarka());
-        System.out.println(modelPojazdu2.getNaped());
-        System.out.println(modelPojazdu2.getNazwa());
+//        System.out.println(modelPojazdu1.toString());
+        System.out.println(modelPojazdu1);
+//        System.out.println(modelPojazdu2);
+//
+//        System.out.println("marka pojazdu: " + modelPojazdu2.getMarka());
+//        System.out.println(modelPojazdu2.getNaped());
+//        System.out.println(modelPojazdu2.getNazwa());
 
     }
 }
