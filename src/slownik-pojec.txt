@@ -127,6 +127,15 @@ Mockito - służy do pisania testów jednostkowych i integracyjnych,
 Log4j 2 - biblioteka służąca do tworzenia logów w trakcie działania aplikacji.
 Slf4j - druga biblioteka służąca do tworzenia logów w trakcie działania aplikacji.
 
+Wzorce pisania nazw zmiennych/klas/metod:
+zmienne - pisane camelCasem. To znaczy zaczynamy z małej litery i każde następne słowo bez spacji i wielkiej litery np. sumaIntegerow
+W przypadku zmiennych statycznych/globalnych dla klasy piszemy je z wielkich liter oddzielając podkreślnikiem np. SEPARATOR_SPACJA
+
+klasy - piszemy CamelCasem zawsze zaczynając z wielkiej litery i każde następne słowo również z wielkiej litery np CalculatorService lub PrzelicznikJednotek
+
+metody - pisane camelCasem. Zawsze zaczynając z małej litery i każde następne słowo z wielkiej litery np. obliczSumeLiczb lub pobierzDaneZKlawiatury
+
+
 
 Modyfikatory dostępu metod/klas/parametrów:
 
