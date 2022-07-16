@@ -3,6 +3,7 @@ package pl.cyber.trainees;
 
 import pl.cyber.trainees.dziedziczenie.Kolor;
 import pl.cyber.trainees.dziedziczenie.Model;
+import pl.cyber.trainees.spotkania.Petle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,10 +39,13 @@ public class SimpleApp {
 //        System.out.println(modelPojazdu2.getNaped());
 //        System.out.println(modelPojazdu2.getNazwa());
 
-        List<String> strings = new ArrayList<>();
-        strings.add("pierwszy"); //element: 0
-        strings.add("drugi"); //element: 1
-        strings.add("trzy"); //element: 2
+//        List<String> strings = new ArrayList<>();
+//        strings.add("pierwszy"); //element: 0
+//        strings.add("drugi"); //element: 1
+//        strings.add("trzy"); //element: 2
+
+        Petle petle = new Petle();
+        petle.wyswietlOd1Do100();
 
 //        System.out.println(strings);
 
@@ -61,16 +65,14 @@ public class SimpleApp {
 //            }
 //        }
 
-        for (String element : strings){
-
-
-            if(element == "pierwszy") { // == - sprawdza czy nasza zmienna tmp jest równa wyrażeniu "pierwszy"
-                System.out.println("pierwszy element: " + element);
-            } else {
-                System.out.println("inny element: " + element);
-            }
-        }
-
+//        for (String element : strings) {
+//
+//            if(element == "pierwszy") { // == - sprawdza czy nasza zmienna tmp jest równa wyrażeniu "pierwszy"
+//                System.out.println("pierwszy element: " + element);
+//            } else {
+//                System.out.println("inny element: " + element);
+//            }
+//        }
 
 
         /*
@@ -110,8 +112,13 @@ public class SimpleApp {
                 // i++ - inkrementacja inaczej zapis i = i + 1
                 // i-- - dekrementacja inaczej zapis i = i - 1
 
-                // ++i - ?
-                // --i - ?
+                // ++i - inkrementacja przed przypisaniem wartości
+//                np.
+//int i = 3;
+//int a = i++; // a = 3, i = 4
+//int b = ++a; // b = 4, a = 4
+
+                // --i - dekrementracja przed przypisaniem wartości
 
         // kod do wykonania
         }
