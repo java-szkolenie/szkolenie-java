@@ -13,6 +13,57 @@ import java.util.Arrays;
 import java.util.List;
 
 
+
+/*
+
+Praca domowa 16-07-2022
+1) do wykonanaia zadanie, które polega na pobraniu od użytkownika informacji wprowadzonych z klawiatury.
+    a) 5 razy Integer
+    b) 5 razy BigDecimal
+  dla każdej opcji powyżej wykonać dodawanie wprowadzonych liczb, mnożenie przez 10 każdej z liczb oraz dzielenie przez 2 każdej z liczb
+  Wyniki zaprezentować w postaci:
+  Dodawanie liczb [a, b, c, d, e]: w
+  Mnożenie przez 10 liczb:
+  a*10: w
+  b*10: w
+  c*10: w
+  d*10: w
+  e*10: w
+
+  etc.
+
+2) do wykonania zadanie nr 2.
+Utworzyć  w 'resources' podkatalog o nazwie 'samochody'
+Następnie utworzyć 3 pliki: samochod1, samochod2, samochod3
+w każdym pliku utworzyć strukturę pojazdu w oparciu o klasę 'Model'
+Każdy plik należy zainicjalizować do nowego obiektu
+
+
+Następnie wyświetlić następujące informacje:
+Pojazd nr 1: w
+Pojazd nr 2: w
+Pojazd nr 3: w
+
+Laczna ilosc przejechanych kilometrow przez samochody: w
+Dostepne pojemosci silnikow samochodow: x, y, z
+
+Do wykonania zadania nalezy wykorzystać zdobytą wiedzę z odbytych zajęć
+
+
+
+
+Dla chętnych:
+Spróbować wykonać odczyt dancyh z zadania nr2 z jednego pliku zamiast trzech różnych
+(tip: aby wykonać to zadanie będzie konieczna nowa metoda odczytująca informacje z plików oraz użycie pętli for)
+
+
+
+*/
+
+
+
+
+
 public class SimpleApp {
 
     public static void main(String[] args) throws FileNotFoundException {
