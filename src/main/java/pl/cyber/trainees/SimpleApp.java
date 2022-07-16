@@ -3,15 +3,47 @@ package pl.cyber.trainees;
 
 import pl.cyber.trainees.dziedziczenie.Kolor;
 import pl.cyber.trainees.dziedziczenie.Model;
+import pl.cyber.trainees.service.OdczytDanych;
 import pl.cyber.trainees.spotkania.Petle;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
 public class SimpleApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+
+        OdczytDanych odczytDanych = new OdczytDanych();
+        //odczytujemy dane z klawiatury
+        System.out.println("Jak masz na imię?");
+
+        String firstName = odczytDanych.wprowadzonaWartoscZKlawiatury();
+        System.out.println("Witaj " + firstName + "!!!");
+
+
+        String firstNameFromFile = odczytDanych.daneZPliku(new File("src/main/resources/dane-zew.txt"));
+        Model modelPojazduZPliku = odczytDanych.daneOModeluPojazdu(new File("src/main/resources/modelPojazdu.txt"));
+
+        System.out.println(firstNameFromFile);
+        System.out.println(modelPojazduZPliku);
+
+        /*
+        Alternatywa w postaci kodu na forach internetowych
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Jak masz na imię?");
+        String firstName = scan.nextLine();
+
+        System.out.println("Witaj " + firstName);
+        */
+
+
+
+
+
 
         //Ctrl + P - podpowiadanie w użyciu metod/ deklaracji Objektów dostępnych parametrów
 
@@ -31,21 +63,34 @@ public class SimpleApp {
         modelPojazdu1.setNaped("przód");
         modelPojazdu1.setRocznik("1990");
 
-        System.out.println(modelPojazdu1);
+//        System.out.println(modelPojazdu1);
 //        System.out.println(modelPojazdu1.toString());
 //        System.out.println(modelPojazdu2);
 //
 //        System.out.println("marka pojazdu: " + modelPojazdu2.getMarka());
 //        System.out.println(modelPojazdu2.getNaped());
 //        System.out.println(modelPojazdu2.getNazwa());
-
+//
 //        List<String> strings = new ArrayList<>();
 //        strings.add("pierwszy"); //element: 0
 //        strings.add("drugi"); //element: 1
 //        strings.add("trzy"); //element: 2
 
-        Petle petle = new Petle();
-        petle.wyswietlOd1Do100();
+//        List<Double> listaDouble = new ArrayList<>(Arrays.asList( //Ctrl+P
+//            1.0,
+//            2.0,
+//            5.0,
+//            10.0,
+//            20.0
+//        ));
+//
+//        listaDouble.add(30.0);
+//
+//
+//        Petle petle = new Petle();
+//        petle.wyswietlOd1Do100();
+//        petle.dodawanieElementowListy(listaDouble);
+//        petle.wyswietlSet();
 
 //        System.out.println(strings);
 
@@ -127,7 +172,7 @@ public class SimpleApp {
         for(String element : strings){ <- zastosowanie do np List
         //String element - pojedyńczy element z strings
         // : oddzielenie elementów od Obiektu Listy
-        // strings - np List<String>, List<BigDecimal> etc.
+        // strings - np List<String>, List<BigDecimal> etc. jako odwołanie do kolekcji na której chcemy przeprowadzić operacje
 
 
         //kod do wykonania
@@ -181,8 +226,14 @@ public class SimpleApp {
 
 
          Set:
-                HashSet() -
-                TreeSet() -
+                HashSet() - nie gwarantuje kolejności
+                TreeSet() - gwarancja kolejności,  Z reguły stosowane do zagadnień "drzewa binarnego"
+
+                Set<String> nazwaSet = new HashSet<>();
+                nazwaSet.add("pierwszy");
+
+
+                size() - w przypadku list, setu etc będzie zwracać ilość elementów kolekcji lista.size(), nazwaSet.size()
          */
     }
 
