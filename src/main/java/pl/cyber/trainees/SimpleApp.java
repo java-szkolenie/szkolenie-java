@@ -3,71 +3,32 @@ package pl.cyber.trainees;
 
 import pl.cyber.trainees.dziedziczenie.Kolor;
 import pl.cyber.trainees.dziedziczenie.Model;
+import pl.cyber.trainees.homeworks.PracaDomowa28Tydz;
 import pl.cyber.trainees.service.OdczytDanych;
 import pl.cyber.trainees.spotkania.Petle;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-
-
-/*
-
-Praca domowa 16-07-2022
-1) do wykonanaia zadanie, które polega na pobraniu od użytkownika informacji wprowadzonych z klawiatury.
-    a) 5 razy Integer
-    b) 5 razy BigDecimal
-  dla każdej opcji powyżej wykonać dodawanie wprowadzonych liczb, mnożenie przez 10 każdej z liczb oraz dzielenie przez 2 każdej z liczb
-  Wyniki zaprezentować w postaci:
-  Dodawanie liczb [a, b, c, d, e]: w
-  Mnożenie przez 10 liczb:
-  a*10: w
-  b*10: w
-  c*10: w
-  d*10: w
-  e*10: w
-
-  etc.
-
-2) do wykonania zadanie nr 2.
-Utworzyć  w 'resources' podkatalog o nazwie 'samochody'
-Następnie utworzyć 3 pliki: samochod1, samochod2, samochod3
-w każdym pliku utworzyć strukturę pojazdu w oparciu o klasę 'Model'
-Każdy plik należy zainicjalizować do nowego obiektu
-
-
-Następnie wyświetlić następujące informacje:
-Pojazd nr 1: w
-Pojazd nr 2: w
-Pojazd nr 3: w
-
-Laczna ilosc przejechanych kilometrow przez samochody: w
-Dostepne pojemosci silnikow samochodow: x, y, z
-
-Do wykonania zadania nalezy wykorzystać zdobytą wiedzę z odbytych zajęć
-
-
-
-
-Dla chętnych:
-Spróbować wykonać odczyt dancyh z zadania nr2 z jednego pliku zamiast trzech różnych
-(tip: aby wykonać to zadanie będzie konieczna nowa metoda odczytująca informacje z plików oraz użycie pętli for)
-
-
-
-*/
-
-
-
-
+import java.util.Scanner;
 
 public class SimpleApp {
 
     public static void main(String[] args) throws FileNotFoundException {
 
+        PracaDomowa28Tydz home = new PracaDomowa28Tydz();
+//        home.rozwiazanieZadaniaNr1();
+//        home.rozwiazanieZadaniaNr1Alternatywa();
+
+//        home.rozwiazanieZadaniaNr2();
+//        home.rozwiazanieZadaniaNr2DlaChetnych();
+
+
+        //region Zajęcia z 28 tyg roku tj. 15-16.07.2022
+/*
         OdczytDanych odczytDanych = new OdczytDanych();
         //odczytujemy dane z klawiatury
         System.out.println("Jak masz na imię?");
@@ -82,17 +43,13 @@ public class SimpleApp {
         System.out.println(firstNameFromFile);
         System.out.println(modelPojazduZPliku);
 
-        /*
-        Alternatywa w postaci kodu na forach internetowych
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Jak masz na imię?");
-        String firstName = scan.nextLine();
 
-        System.out.println("Witaj " + firstName);
-        */
-
-
-
+//        Alternatywa w postaci kodu na forach internetowych
+//        Scanner scan = new Scanner(System.in);
+//        System.out.println("Jak masz na imię?");
+//        String firstName = scan.nextLine();
+//
+//        System.out.println("Witaj " + firstName);
 
 
 
@@ -113,7 +70,9 @@ public class SimpleApp {
         modelPojazdu1.setPrzebieg(12000);
         modelPojazdu1.setNaped("przód");
         modelPojazdu1.setRocznik("1990");
-
+*/
+//endregion
+        //region Komentarz
 //        System.out.println(modelPojazdu1);
 //        System.out.println(modelPojazdu1.toString());
 //        System.out.println(modelPojazdu2);
@@ -286,6 +245,7 @@ public class SimpleApp {
 
                 size() - w przypadku list, setu etc będzie zwracać ilość elementów kolekcji lista.size(), nazwaSet.size()
          */
+        //endregion
     }
 
 }

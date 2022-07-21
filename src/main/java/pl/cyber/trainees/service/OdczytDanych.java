@@ -5,6 +5,9 @@ import pl.cyber.trainees.dziedziczenie.Model;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -21,6 +24,19 @@ public class OdczytDanych {
     return scan.nextLine();
   }
 
+  public Integer wprowadzonyIntegerZKlawiatury() {
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Podaj liczbę typu Integer:");
+    return scan.nextInt();
+  }
+
+  public BigDecimal wprowadzonyBigDecimalZKlawiatury() {
+    Scanner scan = new Scanner(System.in);
+
+    System.out.print("Podaj liczbę typu BigDecimal:");
+    return scan.nextBigDecimal();
+  }
+
   //public String daneZPliku(File plikZew) throws FileNotFoundException
   //throws mówi aplikacji (ewentualnie) pojawiający
   // się błąd przenieść do miejsca wykonania metody
@@ -29,7 +45,6 @@ public class OdczytDanych {
   //Obsłużenie wyjątków
   public String daneZPliku(File plikZew) throws FileNotFoundException
   {
-
     Scanner scan = new Scanner(plikZew);
     return scan.nextLine();
   }
@@ -39,15 +54,30 @@ public class OdczytDanych {
     // string[] <-
     //String[] <-
 
-
     //różnica między tablicą a Listą
     //lista.get(n)
     //tab[n]
 
-    Model modelPojazdu = new Model();
     Scanner scan = new Scanner(plikZew);
-    String liniaWPliku = scan.nextLine();
-    String[] tablicaPliku = liniaWPliku.split(", ");
+    return getModelPojazduZPliku(scan.nextLine());
+  }
+
+  public List<Model> daneOModelachPojazdow(File plikZew) throws FileNotFoundException
+  {
+    List<Model> modelePojazdu = new ArrayList<>();
+    Scanner scan = new Scanner(plikZew);
+
+    while(scan.hasNext()) {
+      modelePojazdu.add(getModelPojazduZPliku(scan.nextLine()));
+    }
+
+    return modelePojazdu;
+  }
+
+  private Model getModelPojazduZPliku(String liniaZPliku) {
+    Model modelPojazdu = new Model();
+
+    String[] tablicaPliku = liniaZPliku.split(", ");
 
     modelPojazdu.setMarka(tablicaPliku[0]);
     modelPojazdu.setRocznik(tablicaPliku[1]);
@@ -59,5 +89,4 @@ public class OdczytDanych {
 
     return modelPojazdu;
   }
-
 }
