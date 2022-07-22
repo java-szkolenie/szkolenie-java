@@ -67,6 +67,10 @@ public class OdczytDanych {
     List<Model> modelePojazdu = new ArrayList<>();
     Scanner scan = new Scanner(plikZew);
 
+//    for (int i =0; i<3; i++) {
+//      modelePojazdu.add(getModelPojazduZPliku(scan.nextLine()));
+//    }
+
     while(scan.hasNext()) {
       modelePojazdu.add(getModelPojazduZPliku(scan.nextLine()));
     }

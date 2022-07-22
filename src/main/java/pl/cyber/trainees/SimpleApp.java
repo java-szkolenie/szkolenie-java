@@ -4,6 +4,8 @@ package pl.cyber.trainees;
 import pl.cyber.trainees.dziedziczenie.Kolor;
 import pl.cyber.trainees.dziedziczenie.Model;
 import pl.cyber.trainees.homeworks.PracaDomowa28Tydz;
+import pl.cyber.trainees.kalkulator.Dodawanie;
+import pl.cyber.trainees.kalkulator.Mnozenie;
 import pl.cyber.trainees.service.OdczytDanych;
 import pl.cyber.trainees.spotkania.Petle;
 
@@ -18,11 +20,10 @@ import java.util.Scanner;
 public class SimpleApp {
 
     public static void main(String[] args) throws FileNotFoundException {
-
         PracaDomowa28Tydz home = new PracaDomowa28Tydz();
+//
 //        home.rozwiazanieZadaniaNr1();
 //        home.rozwiazanieZadaniaNr1Alternatywa();
-
 //        home.rozwiazanieZadaniaNr2();
 //        home.rozwiazanieZadaniaNr2DlaChetnych();
 
@@ -247,5 +248,4 @@ public class SimpleApp {
          */
         //endregion
     }
-
 }

@@ -21,6 +21,7 @@ public class SimpleApp {
 //
 //        System.out.println(a + space + b);
 //        System.out.println(a + SEPARATOR_SPACJA + b);
+//        System.out.println(a + " " + b);
 
 
 //praca domowa

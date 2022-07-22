@@ -26,7 +26,8 @@ public class PracaDomowa28Tydz {
    * 1) do wykonanaia zadanie, które polega na pobraniu od użytkownika informacji wprowadzonych z klawiatury.
    *     a) 5 razy Integer
    *     b) 5 razy BigDecimal
-   *   dla każdej opcji powyżej wykonać dodawanie wprowadzonych liczb, mnożenie przez 10 każdej z liczb oraz dzielenie przez 2 każdej z liczb
+   *   dla każdej opcji powyżej wykonać dodawanie wprowadzonych liczb, mnożenie przez 10 każdej z liczb
+   *   oraz dzielenie przez 2 każdej z liczb
    *   Wyniki zaprezentować w postaci:
    *   Dodawanie liczb [a, b, c, d, e]: w
    *   Mnożenie przez 10 liczb:
@@ -81,7 +82,6 @@ public class PracaDomowa28Tydz {
         + "d/2: "+ (Dzielenie.division(val4,2))
         +"\n"
         + "e/2: "+ (Dzielenie.division(val5,2)));
-
 
     System.out.println("działania dla BigDecimal:");
     System.out.println("Dodawanie liczb [a, b, c, d, e]: " + (
@@ -141,12 +141,44 @@ public class PracaDomowa28Tydz {
         integerList) {
       sumaInt = Dodawanie.add(sumaInt, element);
     }
+    /*
+    1, 2, 3, 4, 5
+
+    sumaInt = 0;
+
+
+    run for(1 : 1,2,3,4,5){
+    0 = Dodawanie.add(0, 1)
+    }
+    next for(2 : 1,2,3,4,5){
+    1 = Dodawanie.add(1, 2)
+    }
+    next for(3 : 1,2,3,4,5){
+    3 = Dodawanie.add(3, 3)
+    }
+    next for(4 : 1,2,3,4,5){
+    6 = Dodawanie.add(6, 4)
+    }
+    next for(5 : 1,2,3,4,5){
+    10 = Dodawanie.add(10, 5)
+    }
+    sumaInt = 15;
+
+
+   zapis adekwatny do foreach tj for(TypDanych nazwaZmiennej : nazwaZmiennejListy)
+   for(int i=0; i<integerList.size(); i++
+    integerList.get(i)
+
+    for(int i=0; i<5; i++
+
+
+     */
+
 
     for (BigDecimal element :
         decimalList) {
       sumaBD = Dodawanie.add(sumaBD, element);
     }
-
 
     System.out.println("działania dla Integer:");
     System.out.println("Dodawanie liczb [a, b, c, d, e]: " + sumaInt);
@@ -161,13 +193,13 @@ public class PracaDomowa28Tydz {
       System.out.println(strings.get(i) + "/2 : " + (Dzielenie.division(integerList.get(i), 10)));
     }
 
-
     System.out.println("działania dla BigDecimal:");
     System.out.println("Dodawanie liczb [a, b, c, d, e]: " + sumaBD);
 
     System.out.println("Mnożenie liczb ");
     for (int i =0; i<decimalList.size(); i++){
       System.out.println(strings.get(i) + "*10 : " + (Mnozenie.multiplication(decimalList.get(i), BigDecimal.TEN)));
+//      System.out.println(strings.get(i) + "*10 : " + (Mnozenie.multiplication(decimalList.get(i), BigDecimal.valueOf(10))));
     }
 
     System.out.println("Dzielenie liczb ");
@@ -202,6 +234,14 @@ public class PracaDomowa28Tydz {
 
     OdczytDanych odczytDanych = new OdczytDanych();
 
+    //1 możliwość
+//    Model samochod1 = new Model();
+//    samochod1 = odczytDanych.daneOModeluPojazdu(new File("src/main/resources/samochody/samochod1.txt"));
+
+    //2 możliwość
+//    var samochod1 = odczytDanych.daneOModeluPojazdu(new File("src/main/resources/samochody/samochod1.txt"));
+
+
     var samochod1 = odczytDanych.daneOModeluPojazdu(new File("src/main/resources/samochody/samochod1.txt"));
     var samochod2 = odczytDanych.daneOModeluPojazdu(new File("src/main/resources/samochody/samochod2.txt"));
     var samochod3 = odczytDanych.daneOModeluPojazdu(new File("src/main/resources/samochody/samochod3.txt"));
@@ -210,7 +250,8 @@ public class PracaDomowa28Tydz {
     System.out.println("Pojazd nr 2: " + samochod2.toString());
     System.out.println("Pojazd nr 3: " + samochod3.toString());
 
-    System.out.println("Łączna ilość przejechanych km przez samochody: " + (samochod1.getPrzebieg() + samochod2.getPrzebieg() + samochod3.getPrzebieg()));
+    System.out.println("Łączna ilość przejechanych km przez samochody: " +
+        (samochod1.getPrzebieg() + samochod2.getPrzebieg() + samochod3.getPrzebieg()));
 
     System.out.println("Dostepne pojemosci silnikow samochodow: "
         + samochod1.getPojemnoscSilnika()
@@ -219,8 +260,6 @@ public class PracaDomowa28Tydz {
         + ", "
         + samochod3.getPojemnoscSilnika());
   }
-
-
   //endregion
 
   //region Rozwiazanie zadania nr 2 - dla chętnych
@@ -249,7 +288,7 @@ public class PracaDomowa28Tydz {
     System.out.print("Dostepne pojemosci silnikow samochodow: ");
 
     for (int i = 0; i<samochod.size(); i++) {
-      if(i<samochod.size()) {
+      if(i<samochod.size()-1) {
         System.out.print(samochod.get(i).getPojemnoscSilnika() + ", ");
       } else {
         System.out.print(samochod.get(i).getPojemnoscSilnika() + ".");
