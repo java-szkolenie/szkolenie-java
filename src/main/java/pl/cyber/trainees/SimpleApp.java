@@ -9,6 +9,7 @@ package pl.cyber.trainees; // oreślenie pakietu wramach projektu, gdzie
 //region miejsce na importy
 
 import pl.cyber.trainees.wyjasnienia.Basics;
+import pl.cyber.trainees.wyjasnienia.BasicsInteger;
 
 import java.awt.*;
 import java.io.File;  //importy zazwyczaj dodają się same ewemtualnie można je dodać poprzez Ctrl + Enter
@@ -54,18 +55,24 @@ public class SimpleApp {
 //    natomiast dobrą praktyką jest aby metoda uruchomieniowa wywoływała konkretne klasy
     // z kodem, który chcemy uruchomić.
 
+    Basics testKonstr = new Basics(124);
+
     //pierwsze rozwiązanie
     Basics basics = new Basics();
-    basics.wyswietlTekst1("Jakiś tekst do wyświetlenia");
+//    basics.wyswietlTekst1("Jakiś tekst do wyświetlenia");
 
-//drugie rozwiązanie
+    //drugie rozwiązanie
     Basics basics2 = new Basics(" Nowy tekst do wyświetlenia ");
-    basics2.wyswietlTekst2("Jakiś tekst do wyświetlenia");
+//    basics2.wyswietlTekst2("Jakiś tekst do wyświetlenia");
 
 
-//trzecie rozwiązanie
+    //trzecie rozwiązanie
     Basics basics3 = new Basics("tekst1", "tekst2", " tekst3");
-    basics3.wyswietlTekst3("Jakiś tekst do wyświetlenia");
+//    basics3.wyswietlTekst3("Jakiś tekst do wyświetlenia");
+
+    BasicsInteger basicsInteger = new BasicsInteger();
+//    basicsInteger.wyswietlLiczbe(12314);
+//    basicsInteger.wyswietlLiczbe2(12314);
 
   }
 

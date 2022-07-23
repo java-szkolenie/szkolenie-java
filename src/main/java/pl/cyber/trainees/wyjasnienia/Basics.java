@@ -6,6 +6,7 @@ public class Basics {
   public String tekst2 = " "; // to jest parametr klasy, który musi być inicjowany poprzez construktor klasy
   public String tekst3 = " ";
   public String tekst4 = " ";
+  public Integer parametrKlasy = 0;
 
 
   //konstruktor klasy ma za zadanie ustawiać parametry niezbędę przy tworzeniu ojektu klasy w tym przypadku Basics
@@ -14,6 +15,10 @@ public class Basics {
   public Basics() { }
 
   public Basics(final String tekst) {
+    //this.tekst2 - poprzez słówko this odwołujemy się do parametru klasy
+    //tekst - jest to wykorzystanie parametru z konstruktora
+    //inaczej do parametru klasy ustawiana jest wartość z parametru konstruktora
+    //tzn parametrKlasy = parametrKonstruktora
     this.tekst2 = tekst;
   }
 
@@ -26,6 +31,16 @@ public class Basics {
     this.tekst2 = tekst2;
     this.tekst3 = tekst3;
     this.tekst4 = tekst4;
+  }
+
+  public Basics(final Integer parametrKonstruktora) {
+    System.out.println(this.parametrKlasy);
+    System.out.println(parametrKonstruktora);
+
+    this.parametrKlasy = parametrKonstruktora;
+
+    System.out.println(this.parametrKlasy);
+    System.out.println(parametrKonstruktora);
   }
 
   public void wyswietlTekst1(String tekst) {
