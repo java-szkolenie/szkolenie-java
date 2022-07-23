@@ -65,7 +65,7 @@ public class SimpleApp {
 
 //trzecie rozwiązanie
     Basics basics3 = new Basics("tekst1", "tekst2", " tekst3");
-    basics2.wyswietlTekst3("Jakiś tekst do wyświetlenia");
+    basics3.wyswietlTekst3("Jakiś tekst do wyświetlenia");
 
   }
 
