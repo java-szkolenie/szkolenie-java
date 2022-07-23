@@ -92,6 +92,7 @@ println("dodawanie nie równe 4"); <- zostanie wyświetlone
 //    }
 
     //trzecie równoważne
+
     if(liczba != 10) {
       return true;
     }
