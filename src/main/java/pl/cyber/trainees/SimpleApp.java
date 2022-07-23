@@ -55,7 +55,7 @@ public class SimpleApp {
 //    natomiast dobrą praktyką jest aby metoda uruchomieniowa wywoływała konkretne klasy
     // z kodem, który chcemy uruchomić.
 
-    Basics testKonstr = new Basics(124);
+//    Basics testKonstr = new Basics(124);
 
     //pierwsze rozwiązanie
     Basics basics = new Basics();
@@ -72,7 +72,20 @@ public class SimpleApp {
 
     BasicsInteger basicsInteger = new BasicsInteger();
 //    basicsInteger.wyswietlLiczbe(12314);
-//    basicsInteger.wyswietlLiczbe2(12314);
+//    basicsInteger2.wyswietlLiczbe2(12314);
+
+    String txt = "Wynik dodawania: ";
+    Integer a = 12;
+    Integer b = 12;
+//    basicsInteger.wyswietlenieSumyLiczb(txt, a, b);
+//
+//    basicsInteger.wyswietlenieSumyLiczb("Wynik dodawania:  ", 12, 12);
+
+//    basics.wyswietlTekst1(txt + basicsInteger.sumaIntow(a, b));
+    Integer suma = basicsInteger.sumaIntow(a,b);
+    basics.wyswietlTekst1(txt + suma);
+    basics.wyswietlSumeDodawania(txt, suma.toString());
+
 
   }
 

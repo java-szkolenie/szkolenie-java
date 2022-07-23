@@ -58,4 +58,8 @@ public class Basics {
     System.out.println(tekst3);
     System.out.println(tekst4);
   }
+
+  public void wyswietlSumeDodawania(String txt, String suma) {
+    System.out.println(txt + suma);
+  }
 }
