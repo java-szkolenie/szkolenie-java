@@ -8,6 +8,9 @@ package pl.cyber.trainees; // oreślenie pakietu wramach projektu, gdzie
 
 //region miejsce na importy
 
+import pl.cyber.trainees.wyjasnienia.Basics;
+
+import java.awt.*;
 import java.io.File;  //importy zazwyczaj dodają się same ewemtualnie można je dodać poprzez Ctrl + Enter
 //poprzez importy powinniśmy rozumieć użycie dodatkowych bibliotek w naszej klasie
 import java.math.*;  // z * mówimy że chcemy zaimportować wszystkie biblioteki wramach pakietu (package) w tym przypadku java.math
@@ -50,6 +53,20 @@ public class SimpleApp {
     //W ramach metody uruchomieniowej możemy deklarować zmienne oraz pisać kod,
 //    natomiast dobrą praktyką jest aby metoda uruchomieniowa wywoływała konkretne klasy
     // z kodem, który chcemy uruchomić.
+
+    //pierwsze rozwiązanie
+    Basics basics = new Basics();
+    basics.wyswietlTekst1("Jakiś tekst do wyświetlenia");
+
+//drugie rozwiązanie
+    Basics basics2 = new Basics(" Nowy tekst do wyświetlenia ");
+    basics2.wyswietlTekst2("Jakiś tekst do wyświetlenia");
+
+
+//trzecie rozwiązanie
+    Basics basics3 = new Basics("tekst1", "tekst2", " tekst3");
+    basics2.wyswietlTekst3("Jakiś tekst do wyświetlenia");
+
   }
 
   //Należy pamiętać, że metody funkcjonalne deklarujemy w taki sposób:
@@ -78,9 +95,7 @@ public class SimpleApp {
     return 0;
   }
 
-
   //w tym miejscu możemy deklarować kolejne metody ich ilość jest dowolna.
   //Zalecana wielość klasy nie powinna przekroczyć 200 linii pliku
 
 }
-
