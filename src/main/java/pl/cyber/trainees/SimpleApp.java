@@ -86,7 +86,6 @@ public class SimpleApp {
     basics.wyswietlTekst1(txt + suma);
     basics.wyswietlSumeDodawania(txt, suma.toString());
 
-
   }
 
   //Należy pamiętać, że metody funkcjonalne deklarujemy w taki sposób:

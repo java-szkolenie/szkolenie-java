@@ -1,0 +1,12 @@
+1. Napisz metodę, która zwróci Twój aktualny wiek.
+2. Napisz metodę, która zwróci Twoje imię,
+3. Napisz metodę, która jako argument przyjmuje liczbę i zwraca true jeśli liczba jest parzysta,
+parzystość sprawdzamy przez znak % 2 inaczej sprawdzamy jej podzielność przez 2
+np. 2 % 2
+4. Napisz metodę, która jako argument przyjmuje liczbę i zwraca true jeśli liczba jest podzielna przez 3 i przez 5,
+5. Napisz metodę, która jako argument przyjmuje liczbę i zwraca go podniesionego do 3 potęgi,
+podniesienie do potęgi realizujemy przez bibliotekę Math i jej metodę pow(liczba, doJakiejPotęgi)
+np. Math.pow(2,3)
+6. Napisz metodę, która jako argument przyjmuje liczbę i zwraca jej pierwiastek kwadratowy
+pierwiastek kwadratowy realizujemy przez bibliotekę Math i jej metodę sqrt(number)
+Math.sqrt(number)
